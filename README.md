@@ -2,13 +2,12 @@
 
 ## Resumo
 
-O script fornecido é uma aplicação web que exibe um leaderboard de usuários com base em sua atividade no GitHub. Ele também permite aos usuários fornecerem XP para outros usuários por meio de um formulário.
+O script fornecido é uma aplicação web leaderboard de membros com base em sua atividade e ganhos de XP no projeto Frontend fusion.permite coordenadores proverem Xp aos membros.
 
 ## Componentes Principais
 
 ### Bibliotecas e Módulos Importados
 
-- `use client`: Importação de um módulo não especificado denominado `client`.
 - `Image` from `next/image`: Componente para exibição de imagens otimizadas, parte do Next.js.
 - `Link` from `next/link`: Componente para criação de links no Next.js.
 - `Check`, `ColumnsIcon`, `Telescope` from `lucide-react`: Ícones utilizados na interface, fornecidos pela biblioteca `lucide-react`.
