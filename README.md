@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Documentação do Script
 
-## Getting Started
+## Resumo
 
-First, run the development server:
+O script fornecido é uma aplicação web que exibe um leaderboard de usuários com base em sua atividade no GitHub. Ele também permite aos usuários fornecerem XP para outros usuários por meio de um formulário.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Componentes Principais
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Bibliotecas e Módulos Importados
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `use client`: Importação de um módulo não especificado denominado `client`.
+- `Image` from `next/image`: Componente para exibição de imagens otimizadas, parte do Next.js.
+- `Link` from `next/link`: Componente para criação de links no Next.js.
+- `Check`, `ColumnsIcon`, `Telescope` from `lucide-react`: Ícones utilizados na interface, fornecidos pela biblioteca `lucide-react`.
+- `First`, `Second`, `Tird` from `"./components/img-icons/ranking.icons"`: Ícones personalizados importados do diretório local.
+- `ReactHTMLElement`, `cloneElement`, `useEffect`, `useState` from `react`: Hooks e elementos React básicos.
+- Firebase: Importação de módulos do Firebase para integração com o banco de dados.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Função Principal: `Home()`
 
-## Learn More
+A função principal `Home()` é um componente funcional React que representa a página principal da aplicação. Ele inclui:
 
-To learn more about Next.js, take a look at the following resources:
+- Estados para armazenar informações sobre os três principais usuários (primeiro, segundo e terceiro lugar), seus nomes e XP.
+- Estados para controlar o formulário de fornecimento de XP.
+- Estados para armazenar informações do formulário (nome de usuário GitHub, link do perfil GitHub, etc.).
+- Efeitos colaterais para carregar dados do GitHub e do Firebase.
+- Funções para registrar novos membros no Firebase.
+- Validação de formulário utilizando `yup`.
+- Renderização da interface do leaderboard e do formulário de fornecimento de XP.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Detalhes do Funcionamento
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Os dados dos três principais usuários são obtidos do GitHub através da API do GitHub.
+- Os dados dos membros registrados são obtidos do Firebase.
+- Os usuários podem fornecer XP para outros usuários preenchendo o formulário e fornecendo informações como nome de usuário GitHub, quantidade de XP e descrição da atividade.
 
-## Deploy on Vercel
+## Componentes da Interface
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- A interface exibe os três principais usuários com suas imagens de perfil do GitHub e links para seus perfis.
+- Os usuários podem clicar em um botão para abrir um formulário onde podem fornecer XP para outros usuários.
+- A interface também inclui ícones e elementos visuais para melhorar a experiência do usuário.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Observações
+
+- A documentação do código inclui descrições dos principais conceitos e funcionalidades presentes no script.
+- Além disso, o código parece estar em TypeScript devido ao uso explícito de tipos em alguns estados e funções.
