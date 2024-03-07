@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Check, ColumnsIcon, Telescope } from "lucide-react";
 import { First, Second, Tird } from "./components/img-icons/ranking.icons";
 import { ReactHTMLElement, cloneElement, useEffect, useState } from "react";
-
+import exploreLogo from '@/app/components/img-icons/codeexplorelogo.svg'
 //importação do Firebase
 
 import { db } from "../../services/firebaseconfig";
@@ -219,22 +219,12 @@ const [allIds, setallIds] = useState([])
   return (
     <>
       <section>
-        <nav
-          className="flex items items-center justify-end gap-6
-      text-[10px]
-          h-10 bg-zinc-900
-       text-white 
-       opacity-90
-        p-6"
-        >
-          <Link href={"/explore"}>Explore</Link>
-          <Link href={"/wizard"}>Wizard</Link>
-          <Link href={"/sensi"}>Sensi</Link>
-        </nav>
+       
         <header
           className="text-white flex flex-col justify-center 
         items-center w-full h-20 mt-10 "
         >
+          <Image src={exploreLogo} width={2} height={2} alt="code explorer Logo" />
           <h2>CODE EXPLORE</h2>
           <h3 className="text-xl text-cyan-300">LEADERBOARD</h3>
         </header>
